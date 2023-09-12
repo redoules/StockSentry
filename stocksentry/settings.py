@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-cvyoutnppojl1pr5b#e)q(_=e*$)9hg3=vj($s-l+8tl-i0)7l
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+LOGIN_REDIRECT_URL = "/users/dashboard"
 
 
 # Application definition
@@ -55,7 +56,7 @@ ROOT_URLCONF = 'stocksentry.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / "templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
